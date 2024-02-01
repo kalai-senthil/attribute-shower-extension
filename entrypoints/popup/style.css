@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  .showOverlay {
+    @apply bg-blue-200;
+  }
+}
+
+.slideAni {
+  animation: slideAni 300ms ease forwards;
+  opacity: 0;
+  transform-origin: top;
+}
+@keyframes slideAni {
+  from {
+    transform: translateY(-20%);
+    transform: scaleY(0);
+  }
+  to {
+    transform: none;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.slideAniBack {
+  animation: slideAniBack 300ms ease-out forwards;
+}
+@keyframes slideAniBack {
+  to {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  from {
+    transform: none;
+    opacity: 1;
+  }
+}
